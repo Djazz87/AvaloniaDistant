@@ -1,6 +1,18 @@
-﻿namespace AvaloniaDistant.ViewModels;
+﻿using System.Collections.ObjectModel;
+using AvaloniaDistant.Models;
+using AvaloniaDistant.Services;
+using AvaloniaDistant.ViewModels;
 
-public partial class MainWindowViewModel : ViewModelBase
+namespace YourProjectName.ViewModels;
+
+public class MainWindowViewModel : ViewModelBase
 {
-    public string Greeting { get; } = "Welcome to Avalonia!";
+    public ObservableCollection<IllnessRecord> IllnessRecords { get; set; }
+
+    public MainWindowViewModel()
+    {
+        IllnessRecords = new ObservableCollection<IllnessRecord>(
+            DataBaseServices.GetIllnessRecords()
+        );
+    }
 }

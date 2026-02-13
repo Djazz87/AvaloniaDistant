@@ -1,8 +1,9 @@
 namespace AvaloniaDistant.Models;
 
-public class departments
+public class Department
 {
-    public int d_Id { get; set;}
+    public int Id { get; set;}
     public string Name {get; set;}
     public int Floor {get; set;}
+    
 }

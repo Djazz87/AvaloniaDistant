@@ -6,6 +6,7 @@ using System.Linq;
 using Avalonia.Markup.Xaml;
 using AvaloniaDistant.ViewModels;
 using AvaloniaDistant.Views;
+using YourProjectName.ViewModels;
 
 namespace AvaloniaDistant;
 
