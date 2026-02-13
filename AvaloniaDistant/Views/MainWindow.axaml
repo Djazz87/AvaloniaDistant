@@ -18,8 +18,7 @@
 
     <DataGrid ItemsSource="{Binding IllnessRecords}"
               AutoGenerateColumns="False"
-              GridLinesVisibility="All"
-              BorderThickness="1">
+              GridLinesVisibility="All">
 
         <DataGrid.Columns>
 
