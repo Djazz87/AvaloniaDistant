@@ -15,7 +15,8 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <viewModels:MainWindowViewModel/>
     </Design.DataContext>
-
+    
+    <Grid RowDefinitions="Auto, Auto *" ColumnDefinitions="Auto, Auto, Auto *" Margin="10">
     <DataGrid ItemsSource="{Binding IllnessRecords}"
               AutoGenerateColumns="False"
               GridLinesVisibility="All">
@@ -45,5 +46,25 @@
 
         </DataGrid.Columns>
     </DataGrid>
+        
+        <Button VerticalAlignment="Top" 
+                Grid.Row="0" Grid.Column="1"
+                Content="Добавить"  
+                Command="{Binding }"/>
+        <Button VerticalAlignment="Top" 
+                Grid.Row="0" Grid.Column="2"
+                Content="Удалить"  
+                Command="{Binding }"/>
+        <Button VerticalAlignment="Top" 
+                Grid.Row="0" Grid.Column="3"
+                Content="Изменить"  
+                Command="{Binding }"/>
+
+
+        
+            
+    </Grid>
+    
+    
 
 </Window>

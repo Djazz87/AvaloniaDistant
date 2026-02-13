@@ -9,5 +9,6 @@ public partial class EditWindow : Window
     public EditWindow()
     {
         InitializeComponent();
+        
     }
 }

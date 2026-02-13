@@ -15,4 +15,17 @@ public class MainWindowViewModel : ViewModelBase
             DataBaseServices.GetIllnessRecords()
         );
     }
+    private Employee _selectedEmployee;
+
+    public Employee SelectedEmployee
+    {
+        get => _selectedEmployee;
+        set
+        {
+            if (Equals(value, _selectedEmployee) ) return;
+            _selectedEmployee = value;
+            OnPropertyChanged();
+        }
+    }
+    
 }
