@@ -12,5 +12,5 @@ public class IllnessRecord
 
         public Employee Employee { get; set; }
         public IllnessType IllnessType { get; set; }
-    
+        
 }

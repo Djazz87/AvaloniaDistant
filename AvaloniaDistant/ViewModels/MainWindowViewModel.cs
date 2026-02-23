@@ -13,6 +13,8 @@ public class MainWindowViewModel : ViewModelBase
     {
         IllnessRecords = new ObservableCollection<IllnessRecord>(
             DataBaseServices.GetIllnessRecords()
+            
+            
         );
     }
     private Employee _selectedEmployee;
@@ -27,5 +29,10 @@ public class MainWindowViewModel : ViewModelBase
             OnPropertyChanged();
         }
     }
+
+   
+    
+    //pagination
+    
     
 }

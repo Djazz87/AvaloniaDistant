@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using AvaloniaDistant.Models;
 using CommunityToolkit.Mvvm.Input;
 using MySqlConnector;
@@ -16,7 +17,7 @@ public class DataBaseServices
     }
 
     public static List<IllnessRecord> GetIllnessRecords()
-{
+    {
     string sql = @"SELECT
     r.Id,r.StartDate,r.EndDate,r.DiagnosisNote,
     e.Id AS EmployeeId,e.FullName,e.Position,e.HireDate,
@@ -37,7 +38,7 @@ JOIN illnesstypes t ON r.IllnessTypeId = t.Id;";
             Department dep = new Department
             {
                 Id = reader.GetInt32("DepartmentId"),
-                Name = reader.GetString("Name"),
+                Name = reader.GetString("DepartmentName"),
                 Floor = reader.GetInt32("Floor")
             };
 
@@ -53,8 +54,8 @@ JOIN illnesstypes t ON r.IllnessTypeId = t.Id;";
             IllnessType type = new IllnessType
             {
                 Id = reader.GetInt32("IllnessTypeId"),
-                Name = reader.GetString("Name"),
-                IsInfectious = reader.GetInt32("tIsInfectious"),
+                Name = reader.GetString("IllnessName"),
+                IsInfectious = reader.GetBoolean("IsInfectious"),
                 QuarantineDays = reader.GetInt32("QuarantineDays")
             };
 
@@ -102,6 +103,8 @@ JOIN illnesstypes t ON r.IllnessTypeId = t.Id;";
         catch (Exception e)
         {
         }
-    }    
+    }
+    
+    
     
 }

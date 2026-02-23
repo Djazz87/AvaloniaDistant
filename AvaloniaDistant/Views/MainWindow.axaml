@@ -17,35 +17,35 @@
     </Design.DataContext>
     
     <Grid RowDefinitions="Auto, Auto *" ColumnDefinitions="Auto, Auto, Auto *" Margin="10">
-    <DataGrid ItemsSource="{Binding IllnessRecords}"
-              AutoGenerateColumns="False"
-              GridLinesVisibility="All">
+        <DataGrid ItemsSource="{Binding IllnessRecords}"
+                  AutoGenerateColumns="False"
+                  GridLinesVisibility="All">
 
-        <DataGrid.Columns>
+            <DataGrid.Columns>
 
-            <DataGridTextColumn Header="Сотрудник"
-                                Binding="{Binding Employee.FullName}" />
+                <DataGridTextColumn Header="Сотрудник"
+                                    Binding="{Binding Employee.FullName}" />
 
-            <DataGridTextColumn Header="Должность"
-                                Binding="{Binding Employee.Position}" />
+                <DataGridTextColumn Header="Должность"
+                                    Binding="{Binding Employee.Position}" />
 
-            <DataGridTextColumn Header="Отдел"
-                                Binding="{Binding Employee.Department.Name}" />
+                <DataGridTextColumn Header="Отдел"
+                                    Binding="{Binding Employee.Department.Name}" />
 
-            <DataGridTextColumn Header="Болезнь"
-                                Binding="{Binding IllnessType.Name}" />
+                <DataGridTextColumn Header="Болезнь"
+                                    Binding="{Binding IllnessType.Name}" />
 
-            <DataGridTextColumn Header="Начало"
-                                Binding="{Binding StartDate}" />
+                <DataGridTextColumn Header="Начало"
+                                    Binding="{Binding StartDate}" />
 
-            <DataGridTextColumn Header="Конец"
-                                Binding="{Binding EndDate}" />
+                <DataGridTextColumn Header="Конец"
+                                    Binding="{Binding EndDate}" />
 
-            <DataGridTextColumn Header="Примечание"
-                                Binding="{Binding DiagnosisNote}" />
+                <DataGridTextColumn Header="Примечание"
+                                    Binding="{Binding DiagnosisNote}" />
 
-        </DataGrid.Columns>
-    </DataGrid>
+            </DataGrid.Columns>
+        </DataGrid>
         
         <Button VerticalAlignment="Top" 
                 Grid.Row="0" Grid.Column="1"
@@ -64,7 +64,5 @@
         
             
     </Grid>
-    
-    
 
 </Window>
